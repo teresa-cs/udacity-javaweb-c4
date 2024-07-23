@@ -31,7 +31,7 @@ public class Cart {
 	@ManyToMany
 	@JsonProperty
 	@Column
-    private List<Item> items;
+    private List<Item> items = new ArrayList<>();
 	
 	@OneToOne(mappedBy = "cart")
 	@JsonProperty
