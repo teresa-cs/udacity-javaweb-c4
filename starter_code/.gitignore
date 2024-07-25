@@ -1,0 +1,22 @@
+# Java build directories
+/bin/
+/build/
+/target/
+
+# IDE specific files
+.idea/
+/*.iml
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Compiled source files
+*.class
