@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "b35c0bfd-ed87-47a5-86fc-f40ddfdc4931",
+		"name": "udacity-module4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17846231"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Admin\",\n    \"password\": \"admin123\",\n    \"confirmPassword\": \"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/user/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImV4cCI6MTcyMjQ0MTU2N30.J9FmeKXICLegniPlobhH4fYuCbP0ywKqDLHKEVFyNo56quRiEzRbbuMDhJQD9xxFZ0JMZHKPQ8CNru02E0WcwA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"admin"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Admin\",\n    \"password\": \"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImV4cCI6MTcyMjQ0MTU2N30.J9FmeKXICLegniPlobhH4fYuCbP0ywKqDLHKEVFyNo56quRiEzRbbuMDhJQD9xxFZ0JMZHKPQ8CNru02E0WcwA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"Admin\",\n    \"itemId\": 1,\n    \"quantity\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/cart/addToCart"
+			},
+			"response": []
+		},
+		{
+			"name": "Submit new order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImV4cCI6MTcyMjQ0MTU2N30.J9FmeKXICLegniPlobhH4fYuCbP0ywKqDLHKEVFyNo56quRiEzRbbuMDhJQD9xxFZ0JMZHKPQ8CNru02E0WcwA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/api/order/submit/Admin"
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImV4cCI6MTcyMjQ0MTU2N30.J9FmeKXICLegniPlobhH4fYuCbP0ywKqDLHKEVFyNo56quRiEzRbbuMDhJQD9xxFZ0JMZHKPQ8CNru02E0WcwA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/order/history/Admin"
+			},
+			"response": []
+		}
+	]
+}
