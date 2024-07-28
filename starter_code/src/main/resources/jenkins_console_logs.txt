@@ -1,0 +1,587 @@
+Started by user Trang Mai
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/myProject
+The recommended git tool is: NONE
+using credential e13a4ae7-9abe-4b6f-a5db-16739b4df429
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/myProject/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/teresa-cs/udacity-javaweb-c4.git # timeout=10
+Fetching upstream changes from https://github.com/teresa-cs/udacity-javaweb-c4.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.36.2'
+using GIT_SSH to set credentials
+[INFO] Currently running in a labeled security context
+ > /usr/bin/chcon --type=ssh_home_t /var/jenkins_home/workspace/myProject@tmp/jenkins-gitclient-ssh11697121477673895287.key
+Verifying host key using known hosts file
+You're using 'Known hosts file' strategy to verify ssh host keys, but your known_hosts file does not exist, please go to 'Manage Jenkins' -> 'Security' -> 'Git Host Key Verification Configuration' and configure host key verification.
+ > git fetch --tags --force --progress -- https://github.com/teresa-cs/udacity-javaweb-c4.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision dedb3f72e8962773eb71d620ab4808a61df8e69a (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f dedb3f72e8962773eb71d620ab4808a61df8e69a # timeout=10
+Commit message: "update war file"
+ > git rev-list --no-walk dc201f77a333e582ce554e75eb5542a1db76483a # timeout=10
+[myProject] $ mvn -f starter_code/pom.xml clean compile package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.3/maven-war-plugin-3.2.3.pom
+Progress (1): 2.8/9.6 kB
+Progress (1): 5.5/9.6 kB
+Progress (1): 8.3/9.6 kB
+Progress (1): 9.6 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.3/maven-war-plugin-3.2.3.pom (9.6 kB at 23 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.3/maven-war-plugin-3.2.3.jar
+Progress (1): 4.1/91 kB
+Progress (1): 8.2/91 kB
+Progress (1): 12/91 kB
+Progress (1): 16/91 kB
+Progress (1): 20/91 kB
+Progress (1): 25/91 kB
+Progress (1): 29/91 kB
+Progress (1): 33/91 kB
+Progress (1): 37/91 kB
+Progress (1): 41/91 kB
+Progress (1): 45/91 kB
+Progress (1): 49/91 kB
+Progress (1): 53/91 kB
+Progress (1): 57/91 kB
+Progress (1): 61/91 kB
+Progress (1): 66/91 kB
+Progress (1): 70/91 kB
+Progress (1): 74/91 kB
+Progress (1): 78/91 kB
+Progress (1): 82/91 kB
+Progress (1): 86/91 kB
+Progress (1): 90/91 kB
+Progress (1): 91 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.3/maven-war-plugin-3.2.3.jar (91 kB at 1.8 MB/s)
+[INFO]
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ auth-course ---
+[INFO] Deleting /var/jenkins_home/workspace/myProject/starter_code/target
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 8 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 21 source files to /var/jenkins_home/workspace/myProject/starter_code/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 8 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 21 source files to /var/jenkins_home/workspace/myProject/starter_code/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/myProject/starter_code/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /var/jenkins_home/workspace/myProject/starter_code/target/test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ auth-course ---
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.076 s - in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 s - in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+10:06:18.354 [main] ERROR com.example.demo.controllers.UserController - Failed to create user with username: newuser - Password validation failed
+10:06:18.367 [main] ERROR com.example.demo.controllers.UserController - Failed to create user with username: newuser - Password validation failed
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 s - in com.example.demo.controllers.UserControllerTest
+[INFO] Running com.example.demo.controllers.CartControllerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s - in com.example.demo.controllers.CartControllerTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- maven-war-plugin:3.2.3:war (default-war) @ auth-course ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.4.0/maven-archiver-3.4.0.pom
+Progress (1): 4.1/4.6 kB
+Progress (1): 4.6 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.4.0/maven-archiver-3.4.0.pom (4.6 kB at 208 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.1.0/plexus-archiver-4.1.0.pom
+Progress (1): 4.1/4.8 kB
+Progress (1): 4.8 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.1.0/plexus-archiver-4.1.0.pom (4.8 kB at 537 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.1.1/plexus-utils-3.1.1.pom
+Progress (1): 4.1/5.1 kB
+Progress (1): 5.1 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.1.1/plexus-utils-3.1.1.pom (5.1 kB at 507 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.1.1/plexus-io-3.1.1.pom
+Progress (1): 4.1/4.5 kB
+Progress (1): 4.5 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.1.1/plexus-io-3.1.1.pom (4.5 kB at 455 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.pom
+Progress (1): 4.1/15 kB
+Progress (1): 8.2/15 kB
+Progress (1): 12/15 kB
+Progress (1): 15 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.pom (15 kB at 1.3 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.10/xstream-parent-1.4.10.pom
+Progress (1): 4.1/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 12/35 kB
+Progress (1): 16/35 kB
+Progress (1): 20/35 kB
+Progress (1): 25/35 kB
+Progress (1): 29/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.10/xstream-parent-1.4.10.pom (35 kB at 1.9 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom
+Progress (1): 386 B
+
+Downloaded from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom (386 B at 35 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom
+Progress (1): 1.6 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom (1.6 kB at 179 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.pom
+Progress (1): 4.1/4.8 kB
+Progress (1): 4.8 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.pom (4.8 kB at 482 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-mapping/3.0.0/maven-mapping-3.0.0.pom
+Progress (1): 4.1/4.1 kB
+Progress (1): 4.1 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-mapping/3.0.0/maven-mapping-3.0.0.pom (4.1 kB at 414 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/22/maven-shared-components-22.pom
+Progress (1): 4.1/5.1 kB
+Progress (1): 5.1 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/22/maven-shared-components-22.pom (5.1 kB at 568 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/27/maven-parent-27.pom
+Progress (1): 4.1/41 kB
+Progress (1): 8.2/41 kB
+Progress (1): 12/41 kB
+Progress (1): 16/41 kB
+Progress (1): 20/41 kB
+Progress (1): 25/41 kB
+Progress (1): 29/41 kB
+Progress (1): 33/41 kB
+Progress (1): 37/41 kB
+Progress (1): 41 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/27/maven-parent-27.pom (41 kB at 3.1 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/17/apache-17.pom
+Progress (1): 4.1/16 kB
+Progress (1): 8.2/16 kB
+Progress (1): 12/16 kB
+Progress (1): 16/16 kB
+Progress (1): 16 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/17/apache-17.pom (16 kB at 1.6 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.21/plexus-interpolation-1.21.pom
+Progress (1): 1.5 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.21/plexus-interpolation-1.21.pom (1.5 kB at 154 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.4.0/maven-archiver-3.4.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.1.0/plexus-archiver-4.1.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.25/plexus-interpolation-1.25.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.1.1/plexus-io-3.1.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar
+Progress (1): 4.1/85 kB
+Progress (1): 8.2/85 kB
+Progress (1): 12/85 kB
+Progress (1): 16/85 kB
+Progress (1): 20/85 kB
+Progress (1): 25/85 kB
+Progress (1): 29/85 kB
+Progress (1): 33/85 kB
+Progress (1): 37/85 kB
+Progress (1): 41/85 kB
+Progress (1): 45/85 kB
+Progress (1): 49/85 kB
+Progress (1): 53/85 kB
+Progress (1): 57/85 kB
+Progress (1): 61/85 kB
+Progress (1): 66/85 kB
+Progress (1): 70/85 kB
+Progress (1): 74/85 kB
+Progress (1): 78/85 kB
+Progress (1): 82/85 kB
+Progress (1): 85 kB
+Progress (2): 85 kB | 2.8/24 kB
+Progress (2): 85 kB | 5.5/24 kB
+Progress (3): 85 kB | 5.5/24 kB | 2.8/75 kB
+Progress (3): 85 kB | 5.5/24 kB | 5.5/75 kB
+Progress (3): 85 kB | 5.5/24 kB | 8.3/75 kB
+Progress (3): 85 kB | 5.5/24 kB | 11/75 kB
+Progress (3): 85 kB | 5.5/24 kB | 14/75 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.25/plexus-interpolation-1.25.jar (85 kB at 1.4 MB/s)
+Progress (3): 5.5/24 kB | 14/75 kB | 2.8/192 kB
+
+Downloading from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+Progress (3): 5.5/24 kB | 14/75 kB | 5.5/192 kB
+Progress (3): 5.5/24 kB | 14/75 kB | 8.3/192 kB
+Progress (3): 5.5/24 kB | 14/75 kB | 11/192 kB
+Progress (3): 5.5/24 kB | 14/75 kB | 14/192 kB
+Progress (3): 5.5/24 kB | 14/75 kB | 16/192 kB
+Progress (4): 5.5/24 kB | 14/75 kB | 16/192 kB | 2.8/590 kB
+Progress (5): 5.5/24 kB | 14/75 kB | 16/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 5.5/24 kB | 17/75 kB | 16/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 8.3/24 kB | 17/75 kB | 16/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 8.3/24 kB | 20/75 kB | 16/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 11/24 kB | 20/75 kB | 16/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 11/24 kB | 20/75 kB | 19/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 14/24 kB | 20/75 kB | 19/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 14/24 kB | 20/75 kB | 22/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 17/24 kB | 20/75 kB | 22/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 17/24 kB | 20/75 kB | 25/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 19/24 kB | 20/75 kB | 25/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 19/24 kB | 20/75 kB | 27/192 kB | 2.8/590 kB | 4.1/7.2 kB
+Progress (5): 19/24 kB | 20/75 kB | 27/192 kB | 2.8/590 kB | 7.2 kB
+Progress (5): 19/24 kB | 20/75 kB | 27/192 kB | 5.5/590 kB | 7.2 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar (7.2 kB at 92 kB/s)
+Progress (4): 19/24 kB | 20/75 kB | 30/192 kB | 5.5/590 kB
+Progress (4): 22/24 kB | 20/75 kB | 30/192 kB | 5.5/590 kB
+Progress (4): 22/24 kB | 22/75 kB | 30/192 kB | 5.5/590 kB
+Progress (4): 24 kB | 22/75 kB | 30/192 kB | 5.5/590 kB
+Progress (4): 24 kB | 25/75 kB | 30/192 kB | 5.5/590 kB
+
+Downloading from central: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+Progress (4): 24 kB | 25/75 kB | 30/192 kB | 8.3/590 kB
+Progress (4): 24 kB | 28/75 kB | 30/192 kB | 8.3/590 kB
+Progress (4): 24 kB | 31/75 kB | 30/192 kB | 8.3/590 kB
+Progress (4): 24 kB | 35/75 kB | 30/192 kB | 8.3/590 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.4.0/maven-archiver-3.4.0.jar (24 kB at 256 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.jar
+Progress (3): 35/75 kB | 30/192 kB | 11/590 kB
+Progress (3): 35/75 kB | 30/192 kB | 14/590 kB
+Progress (3): 35/75 kB | 30/192 kB | 16/590 kB
+Progress (3): 35/75 kB | 30/192 kB | 19/590 kB
+Progress (3): 35/75 kB | 30/192 kB | 22/590 kB
+Progress (3): 35/75 kB | 30/192 kB | 25/590 kB
+Progress (3): 35/75 kB | 30/192 kB | 27/590 kB
+Progress (3): 35/75 kB | 30/192 kB | 30/590 kB
+Progress (4): 35/75 kB | 30/192 kB | 30/590 kB | 4.1/25 kB
+Progress (4): 39/75 kB | 30/192 kB | 30/590 kB | 4.1/25 kB
+Progress (4): 39/75 kB | 30/192 kB | 30/590 kB | 8.2/25 kB
+Progress (4): 39/75 kB | 30/192 kB | 30/590 kB | 12/25 kB
+Progress (4): 39/75 kB | 30/192 kB | 30/590 kB | 16/25 kB
+Progress (4): 39/75 kB | 30/192 kB | 30/590 kB | 20/25 kB
+Progress (4): 39/75 kB | 30/192 kB | 30/590 kB | 25/25 kB
+Progress (4): 39/75 kB | 30/192 kB | 30/590 kB | 25 kB
+Progress (5): 39/75 kB | 30/192 kB | 30/590 kB | 25 kB | 4.1/263 kB
+Progress (5): 39/75 kB | 33/192 kB | 30/590 kB | 25 kB | 4.1/263 kB
+Progress (5): 39/75 kB | 36/192 kB | 30/590 kB | 25 kB | 4.1/263 kB
+Progress (5): 39/75 kB | 38/192 kB | 30/590 kB | 25 kB | 4.1/263 kB
+Progress (5): 39/75 kB | 41/192 kB | 30/590 kB | 25 kB | 4.1/263 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar (25 kB at 242 kB/s)
+Progress (4): 39/75 kB | 44/192 kB | 30/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 33/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 36/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 38/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 41/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 44/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 47/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 49/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 53/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 57/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 61/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 66/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 70/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 74/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 78/590 kB | 4.1/263 kB
+Progress (4): 39/75 kB | 44/192 kB | 82/590 kB | 4.1/263 kB
+
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-mapping/3.0.0/maven-mapping-3.0.0.jar
+Progress (4): 39/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 43/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 47/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 51/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 55/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 59/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 63/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 67/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 72/75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 75 kB | 44/192 kB | 82/590 kB | 8.2/263 kB
+Progress (4): 75 kB | 44/192 kB | 82/590 kB | 12/263 kB
+Progress (4): 75 kB | 44/192 kB | 82/590 kB | 16/263 kB
+Progress (4): 75 kB | 44/192 kB | 82/590 kB | 20/263 kB
+Progress (4): 75 kB | 44/192 kB | 82/590 kB | 25/263 kB
+Progress (4): 75 kB | 44/192 kB | 82/590 kB | 29/263 kB
+Progress (4): 75 kB | 44/192 kB | 82/590 kB | 33/263 kB
+Progress (4): 75 kB | 47/192 kB | 82/590 kB | 33/263 kB
+Progress (5): 75 kB | 47/192 kB | 82/590 kB | 33/263 kB | 4.1/11 kB
+Progress (5): 75 kB | 49/192 kB | 82/590 kB | 33/263 kB | 4.1/11 kB
+Progress (5): 75 kB | 49/192 kB | 82/590 kB | 33/263 kB | 8.2/11 kB
+Progress (5): 75 kB | 52/192 kB | 82/590 kB | 33/263 kB | 8.2/11 kB
+Progress (5): 75 kB | 52/192 kB | 82/590 kB | 33/263 kB | 11 kB
+Progress (5): 75 kB | 55/192 kB | 82/590 kB | 33/263 kB | 11 kB
+Progress (5): 75 kB | 58/192 kB | 82/590 kB | 33/263 kB | 11 kB
+Progress (5): 75 kB | 61/192 kB | 82/590 kB | 33/263 kB | 11 kB
+Progress (5): 75 kB | 65/192 kB | 82/590 kB | 33/263 kB | 11 kB
+Progress (5): 75 kB | 69/192 kB | 82/590 kB | 33/263 kB | 11 kB
+Progress (5): 75 kB | 73/192 kB | 82/590 kB | 33/263 kB | 11 kB
+Progress (5): 75 kB | 77/192 kB | 82/590 kB | 33/263 kB | 11 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-mapping/3.0.0/maven-mapping-3.0.0.jar (11 kB at 78 kB/s)
+Progress (4): 75 kB | 77/192 kB | 82/590 kB | 37/263 kB
+Progress (4): 75 kB | 77/192 kB | 82/590 kB | 41/263 kB
+Progress (4): 75 kB | 77/192 kB | 82/590 kB | 45/263 kB
+Progress (4): 75 kB | 77/192 kB | 82/590 kB | 49/263 kB
+Progress (4): 75 kB | 77/192 kB | 82/590 kB | 53/263 kB
+Progress (4): 75 kB | 77/192 kB | 82/590 kB | 57/263 kB
+Progress (4): 75 kB | 77/192 kB | 82/590 kB | 61/263 kB
+Progress (4): 75 kB | 77/192 kB | 82/590 kB | 66/263 kB
+Progress (4): 75 kB | 81/192 kB | 82/590 kB | 66/263 kB
+Progress (4): 75 kB | 85/192 kB | 82/590 kB | 66/263 kB
+Progress (4): 75 kB | 89/192 kB | 82/590 kB | 66/263 kB
+Progress (4): 75 kB | 93/192 kB | 82/590 kB | 66/263 kB
+Progress (4): 75 kB | 97/192 kB | 82/590 kB | 66/263 kB
+Progress (4): 75 kB | 101/192 kB | 82/590 kB | 66/263 kB
+Progress (4): 75 kB | 106/192 kB | 82/590 kB | 66/263 kB
+Progress (4): 75 kB | 106/192 kB | 82/590 kB | 70/263 kB
+Progress (4): 75 kB | 106/192 kB | 86/590 kB | 70/263 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.1.1/plexus-io-3.1.1.jar (75 kB at 487 kB/s)
+Progress (3): 106/192 kB | 86/590 kB | 74/263 kB
+Progress (3): 106/192 kB | 86/590 kB | 78/263 kB
+Progress (3): 106/192 kB | 86/590 kB | 82/263 kB
+Progress (3): 110/192 kB | 86/590 kB | 82/263 kB
+Progress (3): 110/192 kB | 90/590 kB | 82/263 kB
+Progress (3): 110/192 kB | 94/590 kB | 82/263 kB
+Progress (3): 110/192 kB | 98/590 kB | 82/263 kB
+Progress (3): 110/192 kB | 98/590 kB | 86/263 kB
+Progress (3): 110/192 kB | 98/590 kB | 90/263 kB
+Progress (3): 110/192 kB | 102/590 kB | 90/263 kB
+Progress (3): 110/192 kB | 102/590 kB | 94/263 kB
+Progress (3): 114/192 kB | 102/590 kB | 94/263 kB
+Progress (3): 114/192 kB | 102/590 kB | 98/263 kB
+Progress (3): 114/192 kB | 106/590 kB | 98/263 kB
+Progress (3): 114/192 kB | 111/590 kB | 98/263 kB
+Progress (3): 114/192 kB | 111/590 kB | 102/263 kB
+Progress (3): 118/192 kB | 111/590 kB | 102/263 kB
+Progress (3): 118/192 kB | 111/590 kB | 106/263 kB
+Progress (3): 118/192 kB | 115/590 kB | 106/263 kB
+Progress (3): 118/192 kB | 115/590 kB | 111/263 kB
+Progress (3): 122/192 kB | 115/590 kB | 111/263 kB
+Progress (3): 122/192 kB | 115/590 kB | 115/263 kB
+Progress (3): 122/192 kB | 119/590 kB | 115/263 kB
+Progress (3): 122/192 kB | 123/590 kB | 115/263 kB
+Progress (3): 122/192 kB | 127/590 kB | 115/263 kB
+Progress (3): 122/192 kB | 131/590 kB | 115/263 kB
+Progress (3): 122/192 kB | 135/590 kB | 115/263 kB
+Progress (3): 122/192 kB | 139/590 kB | 115/263 kB
+Progress (3): 122/192 kB | 143/590 kB | 115/263 kB
+Progress (3): 122/192 kB | 143/590 kB | 119/263 kB
+Progress (3): 122/192 kB | 143/590 kB | 123/263 kB
+Progress (3): 126/192 kB | 143/590 kB | 123/263 kB
+Progress (3): 126/192 kB | 143/590 kB | 127/263 kB
+Progress (3): 126/192 kB | 143/590 kB | 131/263 kB
+Progress (3): 130/192 kB | 143/590 kB | 131/263 kB
+Progress (3): 134/192 kB | 143/590 kB | 131/263 kB
+Progress (3): 138/192 kB | 143/590 kB | 131/263 kB
+Progress (3): 142/192 kB | 143/590 kB | 131/263 kB
+Progress (3): 147/192 kB | 143/590 kB | 131/263 kB
+Progress (3): 151/192 kB | 143/590 kB | 131/263 kB
+Progress (3): 151/192 kB | 143/590 kB | 135/263 kB
+Progress (3): 151/192 kB | 147/590 kB | 135/263 kB
+Progress (3): 151/192 kB | 152/590 kB | 135/263 kB
+Progress (3): 151/192 kB | 152/590 kB | 139/263 kB
+Progress (3): 155/192 kB | 152/590 kB | 139/263 kB
+Progress (3): 159/192 kB | 152/590 kB | 139/263 kB
+Progress (3): 159/192 kB | 152/590 kB | 143/263 kB
+Progress (3): 159/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 163/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 167/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 171/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 175/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 179/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 183/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 187/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 192/192 kB | 152/590 kB | 147/263 kB
+Progress (3): 192 kB | 152/590 kB | 147/263 kB
+Progress (3): 192 kB | 156/590 kB | 147/263 kB
+Progress (3): 192 kB | 156/590 kB | 152/263 kB
+Progress (3): 192 kB | 160/590 kB | 152/263 kB
+Progress (3): 192 kB | 160/590 kB | 156/263 kB
+Progress (3): 192 kB | 160/590 kB | 160/263 kB
+Progress (3): 192 kB | 160/590 kB | 164/263 kB
+Progress (3): 192 kB | 164/590 kB | 164/263 kB
+Progress (3): 192 kB | 168/590 kB | 164/263 kB
+Progress (3): 192 kB | 172/590 kB | 164/263 kB
+Progress (3): 192 kB | 172/590 kB | 168/263 kB
+Progress (3): 192 kB | 176/590 kB | 168/263 kB
+Progress (3): 192 kB | 176/590 kB | 172/263 kB
+Progress (3): 192 kB | 176/590 kB | 176/263 kB
+Progress (3): 192 kB | 176/590 kB | 180/263 kB
+Progress (3): 192 kB | 180/590 kB | 180/263 kB
+Progress (3): 192 kB | 184/590 kB | 180/263 kB
+Progress (3): 192 kB | 188/590 kB | 180/263 kB
+Progress (3): 192 kB | 193/590 kB | 180/263 kB
+Progress (3): 192 kB | 197/590 kB | 180/263 kB
+Progress (3): 192 kB | 201/590 kB | 180/263 kB
+Progress (3): 192 kB | 205/590 kB | 180/263 kB
+Progress (3): 192 kB | 209/590 kB | 180/263 kB
+Progress (3): 192 kB | 213/590 kB | 180/263 kB
+Progress (3): 192 kB | 217/590 kB | 180/263 kB
+Progress (3): 192 kB | 221/590 kB | 180/263 kB
+Progress (3): 192 kB | 225/590 kB | 180/263 kB
+Progress (3): 192 kB | 229/590 kB | 180/263 kB
+Progress (3): 192 kB | 233/590 kB | 180/263 kB
+Progress (3): 192 kB | 233/590 kB | 184/263 kB
+Progress (3): 192 kB | 233/590 kB | 188/263 kB
+Progress (3): 192 kB | 233/590 kB | 193/263 kB
+Progress (3): 192 kB | 233/590 kB | 197/263 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.1.0/plexus-archiver-4.1.0.jar (192 kB at 857 kB/s)
+Progress (2): 233/590 kB | 201/263 kB
+Progress (2): 233/590 kB | 205/263 kB
+Progress (2): 233/590 kB | 209/263 kB
+Progress (2): 233/590 kB | 213/263 kB
+Progress (2): 233/590 kB | 217/263 kB
+Progress (2): 238/590 kB | 217/263 kB
+Progress (2): 238/590 kB | 221/263 kB
+Progress (2): 242/590 kB | 221/263 kB
+Progress (2): 242/590 kB | 225/263 kB
+Progress (2): 242/590 kB | 229/263 kB
+Progress (2): 246/590 kB | 229/263 kB
+Progress (2): 250/590 kB | 229/263 kB
+Progress (2): 254/590 kB | 229/263 kB
+Progress (2): 254/590 kB | 233/263 kB
+Progress (2): 258/590 kB | 233/263 kB
+Progress (2): 258/590 kB | 238/263 kB
+Progress (2): 258/590 kB | 242/263 kB
+Progress (2): 258/590 kB | 246/263 kB
+Progress (2): 258/590 kB | 250/263 kB
+Progress (2): 262/590 kB | 250/263 kB
+Progress (2): 266/590 kB | 250/263 kB
+Progress (2): 270/590 kB | 250/263 kB
+Progress (2): 274/590 kB | 250/263 kB
+Progress (2): 279/590 kB | 250/263 kB
+Progress (2): 283/590 kB | 250/263 kB
+Progress (2): 287/590 kB | 250/263 kB
+Progress (2): 291/590 kB | 250/263 kB
+Progress (2): 295/590 kB | 250/263 kB
+Progress (2): 299/590 kB | 250/263 kB
+Progress (2): 303/590 kB | 250/263 kB
+Progress (2): 307/590 kB | 250/263 kB
+Progress (2): 311/590 kB | 250/263 kB
+Progress (2): 315/590 kB | 250/263 kB
+Progress (2): 319/590 kB | 250/263 kB
+Progress (2): 324/590 kB | 250/263 kB
+Progress (2): 328/590 kB | 250/263 kB
+Progress (2): 332/590 kB | 250/263 kB
+Progress (2): 336/590 kB | 250/263 kB
+Progress (2): 340/590 kB | 250/263 kB
+Progress (2): 344/590 kB | 250/263 kB
+Progress (2): 348/590 kB | 250/263 kB
+Progress (2): 352/590 kB | 250/263 kB
+Progress (2): 356/590 kB | 250/263 kB
+Progress (2): 356/590 kB | 254/263 kB
+Progress (2): 360/590 kB | 254/263 kB
+Progress (2): 365/590 kB | 254/263 kB
+Progress (2): 369/590 kB | 254/263 kB
+Progress (2): 373/590 kB | 254/263 kB
+Progress (2): 377/590 kB | 254/263 kB
+Progress (2): 377/590 kB | 258/263 kB
+Progress (2): 377/590 kB | 262/263 kB
+Progress (2): 377/590 kB | 263 kB
+Progress (2): 381/590 kB | 263 kB
+Progress (2): 385/590 kB | 263 kB
+Progress (2): 389/590 kB | 263 kB
+Progress (2): 393/590 kB | 263 kB
+Progress (2): 397/590 kB | 263 kB
+Progress (2): 401/590 kB | 263 kB
+Progress (2): 406/590 kB | 263 kB
+Progress (2): 410/590 kB | 263 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.jar (263 kB at 977 kB/s)
+Progress (1): 414/590 kB
+Progress (1): 418/590 kB
+Progress (1): 422/590 kB
+Progress (1): 426/590 kB
+Progress (1): 430/590 kB
+Progress (1): 434/590 kB
+Progress (1): 438/590 kB
+Progress (1): 442/590 kB
+Progress (1): 446/590 kB
+Progress (1): 451/590 kB
+Progress (1): 455/590 kB
+Progress (1): 459/590 kB
+Progress (1): 463/590 kB
+Progress (1): 467/590 kB
+Progress (1): 471/590 kB
+Progress (1): 475/590 kB
+Progress (1): 479/590 kB
+Progress (1): 483/590 kB
+Progress (1): 487/590 kB
+Progress (1): 492/590 kB
+Progress (1): 496/590 kB
+Progress (1): 500/590 kB
+Progress (1): 504/590 kB
+Progress (1): 508/590 kB
+Progress (1): 512/590 kB
+Progress (1): 516/590 kB
+Progress (1): 520/590 kB
+Progress (1): 524/590 kB
+Progress (1): 528/590 kB
+Progress (1): 532/590 kB
+Progress (1): 537/590 kB
+Progress (1): 541/590 kB
+Progress (1): 545/590 kB
+Progress (1): 549/590 kB
+Progress (1): 553/590 kB
+Progress (1): 557/590 kB
+Progress (1): 561/590 kB
+Progress (1): 565/590 kB
+Progress (1): 569/590 kB
+Progress (1): 573/590 kB
+Progress (1): 578/590 kB
+Progress (1): 582/590 kB
+Progress (1): 586/590 kB
+Progress (1): 590 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar (590 kB at 2.0 MB/s)
+[INFO] Packaging webapp
+[INFO] Assembling webapp [auth-course] in [/var/jenkins_home/workspace/myProject/starter_code/target/auth-course-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [/var/jenkins_home/workspace/myProject/starter_code/src/main/java] to [/var/jenkins_home/workspace/myProject/starter_code/target/auth-course-0.0.1-SNAPSHOT]
+[INFO] Webapp assembled in [346 msecs]
+[INFO] Building war: /var/jenkins_home/workspace/myProject/starter_code/target/auth-course-0.0.1-SNAPSHOT.war
+[INFO] Packaging classes
+[INFO] Building jar: /var/jenkins_home/workspace/myProject/starter_code/target/auth-course-0.0.1-SNAPSHOT-classes.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.3.2.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.211 s
+[INFO] Finished at: 2024-07-28T10:06:23Z
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying /var/jenkins_home/workspace/myProject/starter_code/target/auth-course-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context myApp
+  [/var/jenkins_home/workspace/myProject/starter_code/target/auth-course-0.0.1-SNAPSHOT.war] is not deployed. Doing a fresh deployment.
+  Deploying [/var/jenkins_home/workspace/myProject/starter_code/target/auth-course-0.0.1-SNAPSHOT.war]
+Finished: SUCCESS
